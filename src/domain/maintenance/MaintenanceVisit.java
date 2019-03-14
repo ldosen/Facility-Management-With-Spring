@@ -3,26 +3,35 @@ package domain.maintenance;
 import java.util.List;
 import java.util.ArrayList;
 
-public class MaintenanceVisit {
+public class MaintenanceVisit implements ImaintenanceVisit {
 
     private int visitId;
     private List<Problem> problemsToFix = new ArrayList<>();
 
     public MaintenanceVisit(){}
 
+    @Override
     public int getVisitId() {
         return visitId;
     }
 
+    @Override
     public void setVisitId(int visitId) {
         this.visitId = visitId;
     }
 
-    public void setProblemsToFix(List<Problem> problemsToFix) {
-        this.problemsToFix = problemsToFix;
+    @Override
+    public List<Problem> getProblemsList() {
+        return problemsToFix;
     }
 
-    public void addProblemToFix(Problem problem){
+    @Override
+    public void setProblemsList(List<Problem> problemsList) {
+        this.problemsToFix = problemsList;
+    }
+
+    @Override
+    public void addProblemToFix(Problem problem) {
         problemsToFix.add(problem);
     }
 }
