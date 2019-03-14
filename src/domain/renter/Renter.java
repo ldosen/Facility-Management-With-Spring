@@ -1,6 +1,6 @@
 package domain.renter;
 
-public class Renter {
+public class Renter implements IRenter {
     private int renterId;
     private String lastName;
     private String firstName;
