@@ -1,6 +1,6 @@
 package domain.usage;
 
-public class Use {
+public class Use implements IUse {
 
     private int useId;
     private String useDescription;

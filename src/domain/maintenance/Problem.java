@@ -1,6 +1,6 @@
 package domain.maintenance;
 
-public class Problem {
+public class Problem implements IProblem {
 
     private int problemId;
     private String problemDescription;

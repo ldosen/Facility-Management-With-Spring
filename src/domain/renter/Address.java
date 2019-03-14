@@ -1,6 +1,6 @@
 package domain.renter;
 
-public class Address {
+public class Address implements IAddress {
     private String addressID;
     private String streetName;
     private String apartmentNumber;
