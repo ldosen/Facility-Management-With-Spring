@@ -5,7 +5,7 @@ import domain.maintenance.MaintenanceRequest;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Apartment {
+public class Apartment implements Iapartment {
 
     private int apartmentId;
     private int numberOfRooms;
@@ -29,75 +29,88 @@ public class Apartment {
         this.buildingId = buildingId;
     }
 
-    public int getApartmentId(){
+    @Override
+    public int getApartmentId() {
         return apartmentId;
     }
 
-    public void setApartmentId(int apartmentId){
+    @Override
+    public void setApartmentId(int apartmentId) {
         this.apartmentId = apartmentId;
     }
 
-    public int getNumberOfRooms(){
-        return numberOfRooms;
-    }
-
-    public void setNumberOfRooms(int numberOfRooms){
-        this.numberOfRooms = numberOfRooms;
-    }
-
-    public int getMonthlyRent(){
+    @Override
+    public int getMonthlyRent() {
         return monthlyRent;
     }
 
-    public void setMonthlyRent(int monthlyRent){
+    @Override
+    public void setMonthlyRent(int monthlyRent) {
         this.monthlyRent = monthlyRent;
     }
 
-    public int getRenterId(){
+    @Override
+    public int getRenterId() {
         return renterId;
     }
 
-    public void setRenterId(int renterId){
+    @Override
+    public void setRenterId(int renterId) {
         this.renterId = renterId;
     }
 
-    public String getOccupationStatus(){
+    @Override
+    public String getOccupationStatus() {
         return occupationStatus;
     }
 
-    public void setOccupationStatus(String occupationStatus){
+    @Override
+    public void setOccupationStatus(String occupationStatus) {
         this.occupationStatus = occupationStatus;
     }
 
-    public void setCapacity(int capacity){
-        this.capacity = capacity;
-    }
-
-    public int getCapacity(){
+    @Override
+    public int getCapacity() {
         return capacity;
     }
 
-    public int getBuildingId(){
+    @Override
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    @Override
+    public int getBuildingId() {
         return buildingId;
     }
 
-    public void setBuildingId(int buildingId){
+    @Override
+    public void setBuildingId(int buildingId) {
         this.buildingId = buildingId;
     }
 
+    @Override
     public int getDaysInhabited() {
         return daysInhabited;
     }
 
+    @Override
     public void setDaysInhabited(int daysInhabited) {
         this.daysInhabited = daysInhabited;
     }
 
-    public void setMaintenanceRequests(List<MaintenanceRequest> maintenanceRequests){
+    @Override
+    public List<MaintenanceRequest> getMaintenanceRequests() {
+        return maintenanceRequests;
+    }
+
+    @Override
+    public void setMaintenanceRequests(List<MaintenanceRequest> maintenanceRequests) {
         this.maintenanceRequests = maintenanceRequests;
     }
 
-    public void addMaintenanceRequest(MaintenanceRequest maintenanceRequest){
+    @Override
+    public void addMaintenanceRequest(MaintenanceRequest maintenanceRequest) {
         maintenanceRequests.add(maintenanceRequest);
     }
 
