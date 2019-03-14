@@ -3,7 +3,7 @@ package domain.maintenance;
 import java.*;
 import domain.facility.Apartment;
 
-public class MaintenanceRequest {
+public class MaintenanceRequest implements ImaintenanceRequest {
 
     private int requestId;
     private String maintenanceDescription;
@@ -15,19 +15,24 @@ public class MaintenanceRequest {
         this.maintenanceDescription = maintenanceDescription;
     }
 
-    public int getRequestd(){
+    @Override
+    public int getRequestId() {
         return requestId;
     }
 
-    public void setRequestId(int id){
-        this.requestId = id;
+    @Override
+    public void setRequestId(int requestId) {
+        this.requestId = requestId;
     }
 
-    public String getMaintenanceDescription(){
+    @Override
+    public String getMaintenanceDescription() {
         return maintenanceDescription;
     }
 
-    public void setDescription(String maintenanceDescription){
+    @Override
+    public void setMaintenanceDescription(String maintenanceDescription) {
         this.maintenanceDescription = maintenanceDescription;
     }
+
 }
