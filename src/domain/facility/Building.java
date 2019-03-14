@@ -5,7 +5,7 @@ import domain.renter.Address;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Building {
+public class Building implements Ibuilding {
     private int buildingId;
     private Address address;
     private List<Inspection> inspections = new ArrayList<>();
@@ -16,27 +16,38 @@ public class Building {
         this.buildingId = buildingId;
     }
 
+    @Override
     public int getFacilityId() {
         return buildingId;
     }
 
+    @Override
     public void setFacilityId(int buildingId) {
         this.buildingId = buildingId;
     }
 
+    @Override
     public Address getAddress() {
         return address;
     }
 
-    public void setAddress(Address address){
+    @Override
+    public void setAddress(Address address) {
         this.address = address;
     }
 
-    public void setInspections(List<Inspection> inspections){
+    @Override
+    public List<Inspection> getInspections() {
+        return inspections;
+    }
+
+    @Override
+    public void setInspections(List<Inspection> inspections) {
         this.inspections = inspections;
     }
 
-    public void addInspection(Inspection inspection){
+    @Override
+    public void addInspection(Inspection inspection) {
         inspections.add(inspection);
     }
 }
