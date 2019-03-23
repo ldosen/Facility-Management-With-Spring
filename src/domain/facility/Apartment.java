@@ -115,6 +115,16 @@ public class Apartment implements Iapartment {
     }
 
     @Override
+    public int getNumberOfRooms() {
+        return numberOfRooms;
+    }
+
+    @Override
+    public void setNumberOfRooms(int numberOfRooms) {
+        this.numberOfRooms = numberOfRooms;
+    }
+
+    @Override
     public String toString(){
         String aptattributes = "Apartment ID:" + Integer.toString(apartmentId) + "\nNumber of Rooms:" +
                 Integer.toString(numberOfRooms) + "\nMonthly Rent:" + Integer.toString(monthlyRent) + "\nCurrent Tenant:" + renterId +
