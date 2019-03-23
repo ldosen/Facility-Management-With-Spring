@@ -23,4 +23,6 @@ public interface Iapartment {
     public List<MaintenanceRequest> getMaintenanceRequests();
     public void setMaintenanceRequests(List<MaintenanceRequest> maintenanceRequests);
     public void addMaintenanceRequest(MaintenanceRequest maintenanceRequest);
+    public int getNumberOfRooms();
+    public void setNumberOfRooms(int numberOfRooms);
 }

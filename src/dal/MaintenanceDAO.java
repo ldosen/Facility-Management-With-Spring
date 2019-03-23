@@ -24,7 +24,7 @@ public class MaintenanceDAO {
         try{
             String mrStm = "INSERT INTO MaintenanceRequest(RequestID, MaintenanceDescription, ApartmentID) VALIUES(?, ?, ?)";
             mrPst = con.prepareStatement(mrStm);
-            mrPst.setInt(1, maintenanceRequest.getRequestd());
+            mrPst.setInt(1, maintenanceRequest.getRequestId());
             mrPst.setString(2, maintenanceRequest.getMaintenanceDescription());
             mrPst.setInt(3, apartmentId);
 
