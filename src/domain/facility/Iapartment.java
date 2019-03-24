@@ -1,8 +1,11 @@
 package domain.facility;
 
 import domain.maintenance.MaintenanceRequest;
+import domain.maintenance.MaintenanceVisit;
+import domain.maintenance.Problem;
 
 import java.util.List;
+import java.util.concurrent.PriorityBlockingQueue;
 
 public interface Iapartment {
 
@@ -25,4 +28,11 @@ public interface Iapartment {
     public void addMaintenanceRequest(MaintenanceRequest maintenanceRequest);
     public int getNumberOfRooms();
     public void setNumberOfRooms(int numberOfRooms);
+    public List<MaintenanceVisit> getMaintenanceVisits();
+    public void setMaintenanceVisits(List<MaintenanceVisit> maintenanceVisits);
+    public void addMaintenanceVisit(MaintenanceVisit maintenanceVisit);
+    public List<Problem> getProblems();
+    public void setProblems(List<Problem> problems);
+    public void addProblem(Problem problem);
+
 }
