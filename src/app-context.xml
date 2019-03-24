@@ -25,6 +25,16 @@
                 <ref bean="maintenancerequest"/>
             </list>
         </property>
+        <property name="maintenanceVisits">
+            <list>
+                <ref bean="maintenancevisit"/>
+            </list>
+        </property>
+        <property name="problems">
+            <list>
+                <ref bean="problem"/>
+            </list>
+        </property>
     </bean>
 
     <bean id="maintenancevisit" class="domain.maintenance.MaintenanceVisit" scope="prototype">

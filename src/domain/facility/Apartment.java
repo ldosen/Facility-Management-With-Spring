@@ -1,6 +1,8 @@
 package domain.facility;
 
 import domain.maintenance.MaintenanceRequest;
+import domain.maintenance.MaintenanceVisit;
+import domain.maintenance.Problem;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -16,6 +18,8 @@ public class Apartment implements Iapartment {
     private int buildingId;
     private int daysInhabited;
     private List<MaintenanceRequest> maintenanceRequests = new ArrayList<>();
+    private List<MaintenanceVisit> maintenanceVisits = new ArrayList<>();
+    private List<Problem> problems = new ArrayList<>();
 
     public Apartment(){}
 
@@ -122,6 +126,36 @@ public class Apartment implements Iapartment {
     @Override
     public void setNumberOfRooms(int numberOfRooms) {
         this.numberOfRooms = numberOfRooms;
+    }
+
+    @Override
+    public List<MaintenanceVisit> getMaintenanceVisits() {
+        return maintenanceVisits;
+    }
+
+    @Override
+    public void setMaintenanceVisits(List<MaintenanceVisit> maintenanceVisits) {
+        this.maintenanceVisits = maintenanceVisits;
+    }
+
+    @Override
+    public void addMaintenanceVisit(MaintenanceVisit maintenanceVisit){
+        maintenanceVisits.add(maintenanceVisit);
+    }
+
+    @Override
+    public List<Problem> getProblems() {
+        return problems;
+    }
+
+    @Override
+    public void setProblems(List<Problem> problems) {
+        this.problems = problems;
+    }
+
+    @Override
+    public void addProblem(Problem problem){
+        problems.add(problem);
     }
 
     @Override
