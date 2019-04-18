@@ -17,9 +17,9 @@ public class Apartment implements Iapartment {
     private int capacity;
     private int buildingId;
     private int daysInhabited;
-    private List<MaintenanceRequest> maintenanceRequests = new ArrayList<>();
-    private List<MaintenanceVisit> maintenanceVisits = new ArrayList<>();
-    private List<Problem> problems = new ArrayList<>();
+    private List<MaintenanceRequest> maintenanceRequests;
+    private List<MaintenanceVisit> maintenanceVisits;
+    private List<Problem> problems;
 
     public Apartment(){}
 

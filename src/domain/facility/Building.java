@@ -11,7 +11,7 @@ public class Building implements Ibuilding {
     private int buildingId;
     private Address address;
     private Use use;
-    private List<Inspection> inspections = new ArrayList<>();
+    private List<Inspection> inspections;
 
     public Building(){}
 

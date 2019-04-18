@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class MaintenanceVisit implements ImaintenanceVisit {
 
     private int visitId;
-    private List<Problem> problemsToFix = new ArrayList<>();
+    private List<Problem> problemsToFix;
 
     public MaintenanceVisit(){}
 
